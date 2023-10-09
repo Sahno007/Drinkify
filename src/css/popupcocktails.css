@@ -1,0 +1,267 @@
+/* ===================== Phone style =================== */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .name {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container-popup {
+    position: relative;
+    width: 335px;
+    max-height: 905px;
+    padding: 40px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--background-color);
+    border-radius: 20px;
+  }
+  .popup-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .popup-close-btn-icon {
+    width: 22px;
+    height: 22px;
+    stroke: var(--text-color);
+  }
+  .popup-close-btn-icon:hover,
+  .popup-close-btn-icon:focus {
+    transform: scale(1.1);
+  }
+  .picture {
+    width: 295px;
+    height: 277px;
+  }
+  .picture > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  .caption-card {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.13;
+    letter-spacing: 0;
+    margin-top: 40px;
+  }
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.29;
+    color: rgba(36, 36, 36, 0.5);
+  }
+  .text-card {
+    margin-top: 8px;
+  }
+  .list-card {
+    max-height: 122px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    list-style: initial;
+    list-style-position: inside;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .item-card:hover,
+  .item-card:focus {
+    transform: scale(1.05) translateX(7px);
+    color: rgba(36, 36, 36, 0.8);
+
+    transition: all 250ms linear;
+  }
+  .item-card:hover {
+    color: var(--main-color);
+  }
+  .desc-card {
+    line-height: 1.43;
+    margin-top: 14px;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .container-button {
+    width: 295px;
+    margin-top: 40px;
+  }
+  .button-card {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.02em;
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    text-transform: uppercase;
+  }
+  .favorite {
+    color: var(--cards-color);
+    background-color: var(--main-color);
+
+    transition: all 250ms linear;
+  }
+  .favorite:hover {
+    transform: scale(1.05);
+    background-color: #6e7fcf;
+  }
+  .back {
+    background-color: rgba(36, 36, 36, 0.1);
+    margin-top: 14px;
+
+    transition: all 250ms linear;
+  }
+  .back:hover {
+    transform: scale(1.05);
+    background-color: rgba(36, 36, 36, 0.2);
+  }
+  .popup-cocktails-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    height: 34px;
+    border-radius: 4px;
+    background: var(--main-color);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+
+    transition: background 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  body.dark .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--dark-cards-color);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+  }
+
+  /* ================= Theme dark ================= */
+  body.dark .container-popup {
+    background-color: #232330;
+  }
+  body.dark .popup-close-btn-icon {
+    stroke: var(--cards-color);
+  }
+  body.dark .name {
+    color: var(--cards-color);
+  }
+  body.dark .caption-card {
+    color: var(--cards-color);
+  }
+  body.dark .text {
+    color: rgba(253, 253, 255, 0.5);
+  }
+  body.dark .item-card:hover {
+    color: var(--main-color);
+  }
+  /* .favorite-theme-light has the same color as in the dark theme */
+  body.dark .back {
+    color: var(--cards-color);
+    background-color: rgb(253, 253, 255, 0.1);
+  }
+  body.dark .back:hover {
+    background-color: rgb(253, 253, 255, 0.2);
+  }
+  /* =================== / Theme dark ==================== */
+
+  @media screen and (min-width: 320px) and (max-width: 374px) {
+    .container-popup {
+      width: 100%;
+    }
+  }
+}
+
+/* ============ Tablet-Desctop style ============== */
+@media screen and (min-width: 768px) {
+  .container-popup {
+    width: 600px;
+    max-height: 569px;
+    padding: 40px;
+  }
+  .box {
+    display: flex;
+  }
+  .popup-close-btn {
+    top: 18px;
+    right: 18px;
+  }
+  .popup-close-btn-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+  }
+  .picture {
+    width: 288px;
+    margin-right: 20px;
+  }
+  .name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  .caption-card {
+    margin-top: 20px;
+  }
+  .list-card {
+    height: 160px;
+    width: 233px;
+  }
+  .desc-card {
+    max-height: 60px;
+    margin-top: 18px;
+  }
+  .container-button {
+    display: flex;
+    gap: 18px;
+    width: 520px;
+  }
+  .button-card {
+    font-size: 18px;
+    line-height: 1.33;
+    height: 56px;
+  }
+  .favorite {
+    width: 291px;
+    margin-top: 0;
+  }
+  .back {
+    width: 172px;
+    margin-top: 0;
+  }
+  .item-card:hover,
+  .item-card:focus {
+    transform: scale(1.05) translateX(5px);
+  }
+}
+
+.ingredient-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.ingredient-btn:hover {
+  color: var(--main-color);
+}
+.name.dark {
+  color: var(--cards-color);
+}

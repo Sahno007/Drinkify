@@ -1,0 +1,122 @@
+.tui-pagination.pagination-main {
+    margin: 40px 0 0 0;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tui-pagination .tui-page-btn.btnStyle, 
+.tui-pagination .tui-is-disabled.tui-first.btnStyle,
+.tui-pagination .tui-is-disabled.tui-prev.btnStyle,
+.tui-pagination .tui-is-disabled.tui-last.btnStyle,
+.tui-pagination .tui-is-disabled.tui-next.btnStyle,
+.tui-pagination .tui-first.btnStyle,
+.tui-pagination .tui-prev.btnStyle,
+.tui-pagination .tui-last.btnStyle,
+.tui-pagination .tui-next.btnStyle,
+.tui-pagination .tui-prev-is-ellip.btnStyle,
+.tui-pagination .tui-next-is-ellip.btnStyle
+ {
+    height: 40px;
+    min-width: 30px;
+    margin-right: 8px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: 1px solid #7e8fdd;
+    color: #7e8fdd;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.125;
+
+    transition: all 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+
+.tui-pagination .tui-first+.tui-prev.btnMargR {
+    margin-right: 30px;
+}
+.tui-pagination .tui-next.btnMargL {
+    margin-left: 30px;
+}
+
+.tui-pagination .tui-page-btn.tui-is-selected.btnStyleActive {
+    height: 40px;
+    min-width: 30px;
+    margin-right: 8px;
+    padding: 10px 14px 10px 15px;
+    border-color: transparent;
+    border-radius: 4px;
+    background: #9cdfdf;
+    color: #fdfdff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.125;
+
+}
+.tui-pagination .tui-page-btn.btnStyle:hover,
+.tui-pagination .tui-page-btn.btnStyle:focus {
+    background: #9cdfdf;
+    transform: scale(1.1);
+}
+
+.btnStyleActive {
+    height: 40px;
+    min-width: 30px;
+    padding: 10px 14px 10px 15px;
+    border-color: transparent;
+    border-radius: 4px;
+    background: #9cdfdf;
+    color: #fdfdff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.125;
+
+    transition: all 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .tui-pagination.pagination-main {
+            width: 100%;
+        }
+                .tui-pagination .tui-page-btn.btnStyle,
+                .tui-pagination .tui-is-disabled.tui-first.btnStyle,
+                .tui-pagination .tui-is-disabled.tui-prev.btnStyle,
+                .tui-pagination .tui-is-disabled.tui-last.btnStyle,
+                .tui-pagination .tui-is-disabled.tui-next.btnStyle,
+                .tui-pagination .tui-first.btnStyle,
+                .tui-pagination .tui-prev.btnStyle,
+                .tui-pagination .tui-last.btnStyle,
+                .tui-pagination .tui-next.btnStyle,
+                .tui-pagination .tui-prev-is-ellip.btnStyle,
+                .tui-pagination .tui-next-is-ellip.btnStyle {
+                    min-width: 40px;
+                }
+        
+                .tui-pagination .tui-page-btn.tui-is-selected.btnStyleActive {
+                    min-width: 40px;
+                }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .tui-pagination.pagination-main {
+width: 375px;
+gap: 4px;
+}
+.tui-pagination .tui-first+.tui-prev.btnMargR {
+    margin-right: 20px;
+}
+
+.tui-pagination .tui-next.btnMargL {
+    margin-left: 20px;
+}
+
+}

@@ -1,0 +1,71 @@
+<header class="header">
+  <div class="header-container container">
+    <nav class="header-nav">
+      <ul class="header-list">
+        <li class="header-item">
+          <a class="header-link" href="index.html">Home</a>
+        </li>
+        <li class="header-item">
+          <a class="header-link js-header-link" href="#">
+            Favorite
+            <svg
+              class="header-link-icon js-header-link-icon"
+              width="24"
+              height="24"
+            >
+              <use href="./img/sprite.svg#nav-arrow"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a href="index.html" class="header-logo"
+        ><span class="animation-left">Drinkify</span>
+        <svg class="header-logo-icon animation-right">
+          <use href="./img/sprite.svg#glass"></use>
+        </svg>
+      </a>
+      <ul class="favorite-list js-favorite-list">
+        <li class="favorite-item">
+          <a href="./favorite-cocktails.html" class="favorite-link">
+            Favorite cocktails
+          </a>
+        </li>
+        <li class="favorite-item">
+          <a href="./favorite-ingredients.html" class="favorite-link">
+            Favorite ingredients
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-btn-wrapper">
+      <button type="button" class="themetoggle themetoggle1">
+        <svg class="sun-svg">
+          <use href="./img/sprite.svg#sun-svg"></use>
+        </svg>
+        <span class="themetoggleswitch"></span>
+        <svg class="moon-svg">
+          <use href="./img/sprite.svg#moon-svg"></use>
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="themetoggle_reset themetoggle_reset1"
+      ></button>
+    </div>
+    <button type="button" class="header-menu-burger js-header-menu-burger">
+      <svg class="header-burger-mobile" width="32" height="32">
+        <use href="./img/sprite.svg#burger-mobile"></use>
+      </svg>
+      <svg class="header-burger-tablet" width="40" height="40">
+        <use href="./img/sprite.svg#burger-tablet"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="loader-container">
+  <p class="loader"></p>
+</div>
+
+<script type="module" src="./js/header.js"></script>
+<script type="module" src="./js/header_burger.js"></script>

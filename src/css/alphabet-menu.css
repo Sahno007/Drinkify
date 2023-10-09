@@ -1,0 +1,131 @@
+.alphabet-menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding-top: 33px;
+}
+
+.open-alphabet-btn {
+  position: relative;
+  flex-direction: column;
+  display: inline-flex;
+  height: 34px;
+  width: 90px;
+  padding: 8px 14px 8px 15px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 34px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+background: rgba(126, 143, 221, 0.40);;
+  color: var(--cards-color);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+
+  transition: transform 250ms cubic-bezier(.5, -.75, .7, 2);
+}
+
+.open-alphabet-btn:hover,
+.open-alphabet-btn:focus {
+  transform: scale(1.2);
+}
+
+.svg-icon-down {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+/* .svg-icon-down > use {
+  fill: var(--cards-color);
+} */
+
+.svg-icon-up {
+  position: absolute;
+    top: 8px;
+    right: 14px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    fill: var(--cards-color);
+}
+
+
+.display {
+  display: none;
+}
+
+.list-container {
+  position: absolute;
+  z-index: 3;
+  height: 84px;
+  width: 90px;
+  background: var(--cards-color);
+  border-radius: 8px;
+  border: 1px solid var(--accent-color);
+  top: 70px;
+}
+
+body.dark .list-container {
+  background: var(--text-color);
+}
+
+.alphabet-list {
+  height: 82px;
+  width: 86px;
+  overflow: auto;
+}
+
+.alphabet-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.alphabet-list::-webkit-scrollbar-thumb {
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: rgba(156, 223, 223, 0.8);
+  padding-right: 4px;
+}
+
+.letter-item {
+  display: flex;
+  width: 100%;
+  height: 28px;
+  padding: 4px 10px;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.letter-link {
+  color: var(--text-color);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+body.dark .letter-link {
+  color: var(--cards-color);
+}
+
+.icon-scroll {
+  width: 18px;
+  height: 18px;
+  fill: var(--cards-color);
+}
+
+.letter-active {
+  background-color: var(--accent-color);
+}

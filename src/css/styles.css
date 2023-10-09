@@ -1,0 +1,193 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('../modern-normalize/modern-normalize.min.css');
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./header_backdrop.css');
+@import url('./hero.css');
+@import url('./keyboard.css');
+@import url('./search.css');
+@import url('./cocktails.css');
+@import url('./alphabet-menu.css');
+@import url('./favorite-ingredients.css');
+@import url('./footer.css');
+@import url('./popupcocktails.css');
+@import url('./scroll-up.css');
+@import url('./pop-up-ingredients.css');
+@import url('./pagination.css');
+@import url('./favorite_coctails.css');
+
+:root {
+  --main-color: #7e8fdd;
+  --accent-color: #9cdfdf;
+  --text-color: #242424;
+  --background-color: #f8f9ff;
+  --cards-color: #fdfdff;
+  --dark-cards-color: #232330;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: url('../fonts/poppins-medium-webfont.woff') format('woff'),
+    url('../fonts/poppins-medium-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('../fonts/poppins-semibold-webfont.woff') format('woff'),
+    url('../fonts/poppins-semibold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('../fonts/poppins-italic-webfont.woff') format('woff'),
+    url('../fonts/poppins-italic-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('../fonts/poppins-regular-webfont.woff') format('woff'),
+    url('../fonts/poppins-regular-webfont.woff2') format('woff2');
+}
+
+body {
+  font-family: Poppins;
+  color: var(--text-color);
+  background-image: url('../img/background.jpg');
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.dark {
+  background-image: url('../img/background-dark.jpg');
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  body {
+    background-image: url('../img/background@2x.jpg');
+  }
+
+  body.dark {
+    background-image: url('../img/background-dark@2x.jpg');
+  }
+}
+
+/* Breakpoints:
+375px
+768px
+1280px */
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 34px;
+  border-radius: 4px;
+  background: var(--main-color);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+
+  transition: background 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+@media screen and (max-width: 374px) {
+  .keyboard {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    width: 375px;
+  }
+
+  .keyboard {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('../img/background-tablet.jpg');
+  }
+
+  body.dark {
+    background-image: url('../img/background-tablet-dark.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    body {
+      background-image: url('../img/background-tablet@2x.jpg');
+    }
+
+    body.dark {
+      background-image: url('../img/background-tablet-dark@2x.jpg');
+    }
+  }
+
+  .container {
+    width: 768px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  .alphabet-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background-image: url('../img/background-desktop.jpg');
+  }
+
+  body.dark {
+    background-image: url('../img/background-desktop-dark.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    body {
+      background-image: url('../img/background-desktop@2x.jpg');
+    }
+
+    body.dark {
+      background-image: url('../img/background-desktop-dark@2x.jpg');
+    }
+  }
+
+  .container {
+    width: 1280px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .alphabet-menu {
+    display: none;
+  }
+}

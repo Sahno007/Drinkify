@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite coctails</title>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load src="partials/header.html" />
+    <load src="partials/header_backdrop.html" />
+    <main>
+      <section class="container">
+        <div class="container-section">
+          <h2 class="section-tittle">Favorite cocktails</h2>
+          <div class="plug">
+            <svg class="icon-cocktails">
+              <use href="./img/sprite.svg#cocktails"></use>
+            </svg>
+            <div class="inscription">
+              <p class="message">
+                You haven't added any
+                <span class="color-message">favorite cocktails</span> yet
+              </p>
+            </div>
+          </div>
+          <ul class="cardlist"></ul>
+          <div id="tui-pagination-container" class="tui-pagination pagination-main"></div>
+          <!-- <div class="pagination-main" id="pagination-main"></div> -->
+        </div>
+      </section>
+    </main>
+    <load src="partials/footer.html" />
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/favorite_coctails.js"></script>
+  </body>
+</html>

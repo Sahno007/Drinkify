@@ -1,0 +1,256 @@
+@import url('./pop-up-ingredients.css');
+
+.ingredients-container {
+  padding-bottom: 80px;
+}
+
+.favorite-ingredients-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.ingredients-section-title {
+  display: inline-block;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+body.dark .ingredients-section-title {
+  color: var(--cards-color);
+}
+
+.sorry {
+  width: 244px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+}
+
+body.dark .sorry {
+  color: var(--cards-color);
+}
+
+.sorry-accent {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.sorry-ingredients {
+  margin-top: 98px;
+  margin-bottom: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cocktails-icon {
+  width: 142px;
+  height: 122px;
+}
+
+.in-card {
+  height: 222px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--cards-color);
+  transition: transform 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+body.dark .in-card {
+  background-color: var(--dark-cards-color);
+}
+
+.in-card-title {
+  margin-bottom: 4px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+body.dark .in-card-title {
+  color: var(--cards-color);
+}
+
+.in-card-descr {
+  margin-bottom: 20px;
+  height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
+}
+
+body.dark .in-card-descr {
+  color: var(--cards-color);
+}
+
+.in-card-alco {
+  margin-bottom: 14px;
+  color: rgba(36.12, 36.12, 36.12, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+body.dark .in-card-alco {
+  color: rgba(253, 253, 255, 0.5);
+}
+
+.btn-learn-more {
+  width: 232px;
+  height: 48px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.28px;
+  border-radius: 12px;
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+
+  transition: all 250ms linear;
+}
+
+body.dark .btn-learn-more {
+  color: var(--cards-color);
+}
+
+.btn-learn-more:focus,
+.btn-learn-more:hover {
+  color: var(--cards-color);
+  background-color: var(--main-color);
+  transform: scale(1.05);
+}
+
+.btn-remove {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--main-color);
+  border-color: transparent;
+  text-transform: uppercase;
+
+  transition: all 250ms cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+.btn-remove:hover,
+.btn-remove:focus {
+  transform: scale(1.1);
+}
+
+.in-card-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.remove-icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--cards-color);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-ingredients-list {
+      flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 32px;
+        column-gap: 16px;
+        justify-content: flex-start;
+  }
+  .ingredients-container {
+    padding-bottom: 100px;
+  }
+  .ingredients-section-title {
+    margin-top: 100px;
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .cocktails-icon {
+    width: 234px;
+    height: 201px;
+  }
+  .sorry-ingredients {
+    margin-top: 68px;
+    margin-bottom: 40px;
+    gap: 40px;
+  }
+  .sorry {
+    width: 359px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .in-card {
+    width: calc((100% - 16px) / 2);
+    height: 242px;
+    padding: 24px;
+  }
+  .in-card-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .btn-learn-more {
+    width: 225px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.36px;
+  }
+  .btn-remove {
+    display: flex;
+    width: 56px;
+    height: 56px;
+  }
+  .remove-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .buttons-in {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .favorite-ingredients-list {
+    row-gap: 44px;
+      column-gap: 24px;
+  }
+
+  .in-card {
+    width: calc((100% - 48px) / 3);
+  }
+  
+  .ingredients-section-title {
+    margin-top: 105px;
+    margin-bottom: 44px;
+  }
+  .sorry-ingredients {
+    margin-top: 56px;
+  }
+  .sorry {
+    width: 372px;
+  }
+}

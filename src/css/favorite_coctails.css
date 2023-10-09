@@ -1,0 +1,129 @@
+.section-tittle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 0.8;
+  margin-bottom: 100px;
+}
+
+.icon-cocktails {
+  display: block;
+  width: 142px;
+  height: 122px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inscription {
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: center;
+  width: 244px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-message {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.cardlist-item:last-child {
+  padding-bottom: 0;
+}
+
+.cardlist {
+  padding-bottom: 0;
+}
+
+.section-tittle-with-cards {
+  margin-bottom: 40px;
+}
+
+.container-section {
+  padding-top: 80px;
+  padding-bottom: 138px;
+}
+
+.container-section-with-cards {
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-section {
+    padding-top: 110px;
+    padding-bottom: 140px;
+  }
+
+  .container-section-with-cards {
+    padding-bottom: 100px;
+  }
+
+  .section-tittle {
+    font-size: 40px;
+  }
+
+  .section-tittle-with-cards {
+    margin-bottom: 32px;
+  }
+
+  .icon-cocktails {
+    width: 234px;
+    height: 201px;
+  }
+
+  .inscription {
+    font-size: 24px;
+    line-height: 1.2;
+    width: 372px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-tittle-with-cards {
+    margin-bottom: 44px;
+  }
+}
+
+/* =================== / Theme dark ==================== */
+
+body.dark {
+  color: var(--cards-color);
+  background-image: url(../img/background-dark.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  body.dark {
+    background-image: url(../img/background-dark2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body.dark {
+    background-image: url(../img/background-tablet-dark.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  body.dark {
+    background-image: url(../img/background-tablet-dark@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body.dark {
+    background-image: url(../img/background-desktop-dark.jpg);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  body.dark {
+    background-image: url(../img/background-desktop-dark@2x.jpg);
+  }
+}

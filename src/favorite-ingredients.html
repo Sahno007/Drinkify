@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite ingredients</title>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.css"
+      integrity="sha512-C+KPK958JmUdU8B9SVr8YpEZtQ1T1XrFX/OLvE/lt336DFWXFHL5Y9/tUewMEU+Uy3dUAS363XXLdBine0WDyQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <load src="partials/header.html" />
+    <load src="partials/header_backdrop.html" />
+    <main>
+      <section class="container">
+        <div class="ingredients-container">
+          <h1 class="ingredients-section-title">Favorite ingredients</h1>
+          <ul class="favorite-ingredients-list"></ul>
+          <div class="sorry-ingredients">
+            <svg class="cocktails-icon">
+              <use href="./img/sprite.svg#cocktails"></use>
+            </svg>
+            <p class="sorry">
+              You haven't added any
+              <span class="sorry-accent">favorite ingredients</span> yet
+            </p>
+          </div>
+          <div id="tui-pagination-container" class="tui-pagination pagination-main"></div>
+          <!-- <div id="tui-pagination-container" class="tui-pagination"></div> -->
+        </div>
+      </section>
+    </main>
+    <load src="partials/footer.html" />
+    <script type="module" src="js/favorite-ingredients.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite coctails</title>
+    <link rel="icon" type="image/svg+xml" href="/Drinkify/assets/favicon-cf4c2324.svg" />
+    <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    
+    <script type="module" crossorigin src="/Drinkify/assets/tui-pagination-39f9a9b9.js"></script>
+    <script type="module" crossorigin src="/Drinkify/assets/favorite_coctails-f2d88a05.js"></script>
+    <link rel="stylesheet" href="/Drinkify/assets/tui-pagination-134b075b.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="header-container container">
+    <nav class="header-nav">
+      <ul class="header-list">
+        <li class="header-item">
+          <a class="header-link" href="index.html">Home</a>
+        </li>
+        <li class="header-item">
+          <a class="header-link js-header-link" href="#">
+            Favorite
+            <svg
+              class="header-link-icon js-header-link-icon"
+              width="24"
+              height="24"
+            >
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#nav-arrow"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a href="index.html" class="header-logo"
+        ><span class="animation-left">Drinkify</span>
+        <svg class="header-logo-icon animation-right">
+          <use href="/Drinkify/assets/sprite-f91443a8.svg#glass"></use>
+        </svg>
+      </a>
+      <ul class="favorite-list js-favorite-list">
+        <li class="favorite-item">
+          <a href="./favorite-cocktails.html" class="favorite-link">
+            Favorite cocktails
+          </a>
+        </li>
+        <li class="favorite-item">
+          <a href="./favorite-ingredients.html" class="favorite-link">
+            Favorite ingredients
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-btn-wrapper">
+      <button type="button" class="themetoggle themetoggle1">
+        <svg class="sun-svg">
+          <use href="/Drinkify/assets/sprite-f91443a8.svg#sun-svg"></use>
+        </svg>
+        <span class="themetoggleswitch"></span>
+        <svg class="moon-svg">
+          <use href="/Drinkify/assets/sprite-f91443a8.svg#moon-svg"></use>
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="themetoggle_reset themetoggle_reset1"
+      ></button>
+    </div>
+    <button type="button" class="header-menu-burger js-header-menu-burger">
+      <svg class="header-burger-mobile" width="32" height="32">
+        <use href="/Drinkify/assets/sprite-f91443a8.svg#burger-mobile"></use>
+      </svg>
+      <svg class="header-burger-tablet" width="40" height="40">
+        <use href="/Drinkify/assets/sprite-f91443a8.svg#burger-tablet"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="loader-container">
+  <p class="loader"></p>
+</div>
+
+
+
+
+    <div class="header-backdrop js-header-backdrop">
+  <div class="header-menu-star-wrapper">
+    <svg class="header-menu-star">
+      <use href="/Drinkify/assets/sprite-f91443a8.svg#icon-modal-star"></use>
+    </svg>
+    <div class="header-menu-container container">
+      <a href="index.html" class="header-menu-logo"
+        >Drinkify
+        <svg class="header-menu-logo-icon">
+          <use href="/Drinkify/assets/sprite-f91443a8.svg#glass"></use>
+        </svg>
+      </a>
+      <div class="header-menu-buttons-wrapper">
+        <div class="header-menu-btn-wrapper">
+          <button type="button" class="page-themetoggle themetoggle2">
+            <svg class="sun-icon">
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#sun-svg"></use>
+            </svg>
+            <span class="themetoggle-switch"></span>
+            <svg class="moon-icon">
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#moon-svg"></use>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="page-themetoggle_reset themetoggle_reset2"
+          ></button>
+        </div>
+        <button type="button" class="header-menu-close js-header-menu-close">
+          <svg class="header-menu-close-icon">
+            <use href="/Drinkify/assets/sprite-f91443a8.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header-menu-nav-container">
+        <ul class="header-menu-list">
+          <li class="header-menu-item">
+            <a class="header-menu-link" href="index.html">Home</a>
+          </li>
+          <li class="header-menu-item">
+            <a class="header-menu-link js-header-menu-link">
+              Favorite
+              <svg
+                class="header-menu-link-icon js-header-menu-link-icon"
+                width="24"
+                height="24"
+              >
+                <use href="/Drinkify/assets/sprite-f91443a8.svg#nav-arrow"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="favorite-menu-list js-favorite-menu-list">
+          <li class="favorite-menu-item">
+            <a href="./favorite-cocktails.html" class="favorite-menu-link">
+              Favorite cocktails
+            </a>
+          </li>
+          <li class="favorite-menu-item">
+            <a href="./favorite-ingredients.html" class="favorite-menu-link">
+              Favorite ingredients
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <main>
+      <section class="container">
+        <div class="container-section">
+          <h2 class="section-tittle">Favorite cocktails</h2>
+          <div class="plug">
+            <svg class="icon-cocktails">
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#cocktails"></use>
+            </svg>
+            <div class="inscription">
+              <p class="message">
+                You haven't added any
+                <span class="color-message">favorite cocktails</span> yet
+              </p>
+            </div>
+          </div>
+          <ul class="cardlist"></ul>
+          <div id="tui-pagination-container" class="tui-pagination pagination-main"></div>
+          <!-- <div class="pagination-main" id="pagination-main"></div> -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <div class="container footer-container">
+    <a class="footer-logo" href="index.html"
+      ><p class="footer-logo-text">Drinkify</p>
+      <svg class="footer-logo-icon">
+        <use href="/Drinkify/assets/sprite-f91443a8.svg#glass"></use>
+      </svg>
+    </a>
+    <div>
+      <p class="social-descr">We in social</p>
+      <ul class="social-media-list">
+        <li class="social-media-item">
+          <a
+            href="https://www.facebook.com/goITclub/"
+            class="social-list-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook icon"
+          >
+            <svg class="social-list-icon">
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a
+            href="https://www.instagram.com/goitclub/"
+            class="social-list-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram icon"
+            ><svg class="social-list-icon">
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a
+            href="https://www.youtube.com/c/GoIT"
+            class="social-list-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube icon"
+            ><svg class="social-list-icon">
+              <use href="/Drinkify/assets/sprite-f91443a8.svg#you-tube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="footer-created-by-title">Created by</h2>
+    <div class="slider-container">
+      <div class="cr-by-wrapper">
+        <!-- <div class="btn-container-cr-by" id="leftslider"> -->
+        <svg class="cr-by-arrow cr-by-arrow-left" id="leftslider">
+          <use href="/Drinkify/assets/sprite-f91443a8.svg#arrow-left"></use>
+        </svg>
+        <!-- </div> -->
+        <ul class="carousel-cr-by">
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/kateryna-8145da5b.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/kateryna-e8c51654.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/kateryna-e8c51654.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Kateryna"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Kateryna Zhuvak</h2>
+            <h3 class="dev-role">Team Lead</h3>
+            <p class="dev-duities">Alphabet, Scroll Up</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/valentyna-6a6405aa.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/valentyna-0ea69a69.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/valentyna-0ea69a69.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Valentyna"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Valentyna Malko</h2>
+            <h3 class="dev-role">Scrum Master</h3>
+            <p class="dev-duities">Footer</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/dmytro-cae1f1fc.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/dmytro-4c15e3de.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/dmytro-4c15e3de.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Dmytro"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Dmytro Semeniuk</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Pop-up "Cocktails"</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/mariia-23afdc19.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/mariia-12a7d8c3.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/mariia-12a7d8c3.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Mariia"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Mariia Pelypyshyn</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Favorite cocktails</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/oleksandr-5945c2d3.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/oleksandr-b9eb0263.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/oleksandr-b9eb0263.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Oleksandr"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Oleksandr Horlov</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Hero</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/yuliia-4010d413.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/yuliia-8d66fa2f.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/yuliia-8d66fa2f.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Yuliia"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Yuliia Kulibaba</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Search</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/andrii-c1633f91.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/andrii-8ba406c1.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  src="/Drinkify/assets/andrii-8ba406c1.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Andrii"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Andrii Skliar</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Header</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/kamila-344c465a.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/kamila-9c104c14.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/kamila-9c104c14.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Kamila"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Kamila Bohdanova</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Pop-up "Ingredients"</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/nataliia-6858093f.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/nataliia-1deeaa60.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/nataliia-1deeaa60.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Nataliia"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Nataliia Pashchenko</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Pagination</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/nikita-6827b447.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/nikita-159999e0.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/nikita-159999e0.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Nikita"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Nikita Kachan</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Favorite ingredients</p>
+          </li>
+          <li class="cr-by-card">
+            <div class="cr-by-image">
+              <picture>
+                <source
+                  srcset="/Drinkify/assets/jaroslaw-f8e77ae7.webp "
+                  type="image/webp"
+                />
+                <source
+                  srcset="/Drinkify/assets/jaroslaw-e6782403.jpg "
+                  type="image/jpeg"
+                />
+                <img
+                  loading="lazy"
+                  src="/Drinkify/assets/jaroslaw-e6782403.jpg"
+                  width="90"
+                  draggable="false"
+                  alt="Jaroslaw"
+                  class="developer-img"
+                />
+              </picture>
+            </div>
+            <h2 class="dev-name">Jaroslaw Ignatov</h2>
+            <h3 class="dev-role">Front end</h3>
+            <p class="dev-duities">Cocktails</p>
+          </li>
+        </ul>
+        <!-- <div class="btn-container-cr-by" > -->
+        <svg class="cr-by-arrow cr-by-arrow-right">
+          <use href="/Drinkify/assets/sprite-f91443a8.svg#arrow-right" id="rightslider"></use>
+        </svg>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    
+    
+  </body>
+</html>
